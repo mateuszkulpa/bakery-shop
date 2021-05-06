@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shops",
+  "info": {
+    "name": "Shop",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "locationLink": {
+      "type": "string"
+    }
+  }
+}

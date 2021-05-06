@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "Order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clientName": {
+      "type": "string",
+      "required": true
+    },
+    "clientPhoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "clientAddress": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "order-components.order-item",
+      "required": true
+    },
+    "deliveryPrice": {
+      "required": true,
+      "type": "decimal",
+      "default": 0
+    },
+    "totalPrice": {
+      "required": true,
+      "type": "decimal"
+    },
+    "deliveryType": {
+      "type": "enumeration",
+      "enum": [
+        "pickup",
+        "delivery"
+      ],
+      "required": true
+    }
+  }
+}

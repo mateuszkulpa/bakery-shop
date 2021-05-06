@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cake-categories",
+      "handler": "cake-category.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cake-categories/count",
+      "handler": "cake-category.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cake-categories/:id",
+      "handler": "cake-category.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cake-categories",
+      "handler": "cake-category.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cake-categories/:id",
+      "handler": "cake-category.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cake-categories/:id",
+      "handler": "cake-category.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

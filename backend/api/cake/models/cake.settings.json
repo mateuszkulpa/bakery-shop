@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cakes",
+  "info": {
+    "name": "Cake",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "cakeCategories": {
+      "collection": "cake-category"
+    },
+    "coverImage": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "pricePerKg": {
+      "type": "decimal",
+      "default": 50
+    },
+    "minKg": {
+      "type": "decimal",
+      "default": 1,
+      "required": true
+    },
+    "maxKg": {
+      "type": "decimal",
+      "default": 5,
+      "required": true
+    }
+  }
+}
