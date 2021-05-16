@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Home from "../views/Home.vue";
-import Products from "../views/Products.vue";
+import Home from "../components/pages/home/Home.vue";
+import Products from "../components/pages/products/Products.vue";
+import Product from "../components/pages/product/Product.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -14,19 +15,18 @@ const routes: Array<RouteRecordRaw> = [
     component: Products,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/product/:id/:slug",
+    name: "Product",
+    component: Product,
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
 
 export default router;

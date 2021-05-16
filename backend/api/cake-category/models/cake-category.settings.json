@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "cake_categories",
   "info": {
-    "name": "Cake category"
+    "name": "Cake category",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true,
       "unique": true

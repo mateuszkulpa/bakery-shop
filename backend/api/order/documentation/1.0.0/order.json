@@ -568,6 +568,7 @@
                   "required": [
                     "id",
                     "name",
+                    "slug",
                     "coverImage",
                     "minKg",
                     "maxKg"
@@ -579,20 +580,20 @@
                     "name": {
                       "type": "string"
                     },
+                    "slug": {
+                      "type": "string"
+                    },
                     "description": {
                       "type": "string"
                     },
-                    "cakeCategories": {
+                    "categories": {
                       "type": "array",
                       "items": {
                         "type": "string"
                       }
                     },
                     "coverImage": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
+                      "type": "string"
                     },
                     "images": {
                       "type": "array",
@@ -693,6 +694,7 @@
                   "required": [
                     "id",
                     "name",
+                    "slug",
                     "coverImage",
                     "minKg",
                     "maxKg"
@@ -704,20 +706,20 @@
                     "name": {
                       "type": "string"
                     },
+                    "slug": {
+                      "type": "string"
+                    },
                     "description": {
                       "type": "string"
                     },
-                    "cakeCategories": {
+                    "categories": {
                       "type": "array",
                       "items": {
                         "type": "string"
                       }
                     },
                     "coverImage": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
+                      "type": "string"
                     },
                     "images": {
                       "type": "array",

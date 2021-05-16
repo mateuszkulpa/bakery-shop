@@ -1,20 +1,17 @@
 <template>
   <app-navigation />
-  <main class="max-w-screen-xl mx-auto min-h-screen">
-    <app-page>
-      <router-view />
-    </app-page>
+  <main class="min-h-screen">
+    <router-view />
   </main>
   <app-footer />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import AppNavigation from "@/components/layout/AppNavigation.vue";
-import AppFooter from "@/components/layout/AppFooter.vue";
-import AppPage from "@/components/layout/AppPage.vue";
+import AppNavigation from "@/components/organisms/app-header/AppNavigation.vue";
+import AppFooter from "@/components/organisms/app-footer/AppFooter.vue";
 
 export default defineComponent({
-  components: { AppNavigation, AppFooter, AppPage },
+  components: { AppNavigation, AppFooter },
 });
 </script>

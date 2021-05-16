@@ -16,14 +16,19 @@
       "type": "string",
       "required": true
     },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
     "description": {
       "type": "richtext"
     },
-    "cakeCategories": {
+    "categories": {
       "collection": "cake-category"
     },
     "coverImage": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images"

@@ -530,13 +530,13 @@
       "Cake-category": {
         "required": [
           "id",
-          "Name"
+          "name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Name": {
+          "name": {
             "type": "string"
           },
           "image": {
@@ -614,10 +614,10 @@
       },
       "NewCake-category": {
         "required": [
-          "Name"
+          "name"
         ],
         "properties": {
-          "Name": {
+          "name": {
             "type": "string"
           },
           "published_at": {

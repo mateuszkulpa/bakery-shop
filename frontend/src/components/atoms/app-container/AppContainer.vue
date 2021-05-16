@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12 mx-8">
+  <div class="max-w-screen-xl">
     <slot />
   </div>
 </template>
