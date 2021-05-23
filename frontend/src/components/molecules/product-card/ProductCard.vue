@@ -19,7 +19,7 @@
       </div>
       <h3 class="text-lg font-bold">{{ product.name }}</h3>
       <div>
-        <span class="font-bold text-3xl">{{ product.pricePerKg }} zł</span>
+        <span class="font-bold text-3xl">{{ product.pricePerKg }} PLN</span>
         <span class="text-lg text-gray-500"> / kg</span>
       </div>
     </div>

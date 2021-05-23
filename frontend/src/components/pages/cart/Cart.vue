@@ -1,5 +1,5 @@
 <template>
-  <h3 class="text-4xl font-extrabold text-center">Koszyk</h3>
+  <section-title>Koszyk</section-title>
   <cart-template :cart-items="cartItems" />
 </template>
 
@@ -7,9 +7,10 @@
 import useCart from "@/composables/useCart";
 import { defineComponent } from "vue";
 import CartTemplate from "@/components/templates/cart/Cart.vue";
+import SectionTitle from "@/components/atoms/section-title/SectionTitle.vue";
 
 export default defineComponent({
-  components: { CartTemplate },
+  components: { CartTemplate, SectionTitle },
   setup() {
     const { cartItems } = useCart();
 
