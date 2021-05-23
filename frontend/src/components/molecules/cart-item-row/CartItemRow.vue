@@ -6,9 +6,15 @@
     />
 
     <div class="md:ml-4 flex flex-col space-y-4 justify-between w-full">
-      <h3 class="text-3xl font-extrabold">
+      <router-link
+        :to="{
+          name: 'Product',
+          params: { id: cartItem.product.id, slug: cartItem.product.slug },
+        }"
+        class="text-3xl font-extrabold"
+      >
         {{ cartItem.product.name }}
-      </h3>
+      </router-link>
 
       <div>
         <label class="text-gray-500 mb-1 block text-sm">Waga</label>
