@@ -1,6 +1,6 @@
 <template>
   <app-navigation />
-  <main class="min-h-screen">
+  <main class="min-h-screen max-w-screen-xl py-12 px-4 md:px-8 mx-auto">
     <router-view />
   </main>
   <app-footer />

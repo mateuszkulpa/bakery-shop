@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Home from "../components/pages/home/Home.vue";
-import Products from "../components/pages/products/Products.vue";
-import Product from "../components/pages/product/Product.vue";
+import Home from "@/components/pages/home/Home.vue";
+import Products from "@/components/pages/products/Products.vue";
+import Product from "@/components/pages/product/Product.vue";
+import Cart from "@/components/pages/cart/Cart.vue";
+import Checkout from "@/components/pages/checkout/Checkout.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,6 +20,16 @@ const routes: Array<RouteRecordRaw> = [
     path: "/product/:id/:slug",
     name: "Product",
     component: Product,
+  },
+  {
+    path: "/cart",
+    name: "Cart",
+    component: Cart,
+  },
+  {
+    path: "/checkout",
+    name: "Checkout",
+    component: Checkout,
   },
 ];
 
