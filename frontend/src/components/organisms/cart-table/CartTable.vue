@@ -10,6 +10,7 @@
       v-for="cartItem in cartItems"
       :key="cartItem.id"
       :cart-item="cartItem"
+      :readonly="readonly"
     />
   </div>
 </template>
@@ -23,6 +24,11 @@ export default defineComponent({
   components: { CartItemRow, AppButton },
   props: {
     cartItems: { type: Array as PropType<CartItem[]>, required: true },
+    readonly: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
 });
 </script>

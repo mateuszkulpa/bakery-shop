@@ -32,7 +32,7 @@
           :price-per-kg="cartItem.product.pricePerKg"
         />
         <div class="flex justify-end">
-          <button class="px-4" @click="onRemove">Usuń</button>
+          <button v-if="!readonly" class="px-4" @click="onRemove">Usuń</button>
         </div>
       </div>
     </div>
@@ -55,6 +55,11 @@ export default defineComponent({
     cartItem: {
       type: Object as PropType<CartItem>,
       required: true,
+    },
+    readonly: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
   setup(props) {

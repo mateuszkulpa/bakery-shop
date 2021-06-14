@@ -4,6 +4,7 @@ import Products from "@/components/pages/products/Products.vue";
 import Product from "@/components/pages/product/Product.vue";
 import Cart from "@/components/pages/cart/Cart.vue";
 import Checkout from "@/components/pages/checkout/Checkout.vue";
+import ThankYou from "@/components/pages/thank-you/ThankYou.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -30,6 +31,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/checkout",
     name: "Checkout",
     component: Checkout,
+  },
+  {
+    path: "/thank-you",
+    name: "ThankYou",
+    component: ThankYou,
   },
 ];
 

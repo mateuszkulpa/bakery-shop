@@ -2,7 +2,7 @@
   <div class="max-w-2xl mx-auto space-y-8">
     <cart-table :cart-items="cartItems" />
 
-    <cart-summary :cart-items="cartItems" />
+    <cart-summary v-if="cartItems.length > 0" :cart-items="cartItems" />
 
     <div v-if="cartItems.length > 0" class="flex justify-between">
       <app-button type="secondary" tag="router-link" :to="{ name: 'Products' }">

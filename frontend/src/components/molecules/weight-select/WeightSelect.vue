@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <label class="text-gray-500 mb-1 block text-sm">Waga</label>
+  <app-field label="Waga">
     <app-select
       :value="modelValue"
       @update:modelValue="(val) => $emit('update:modelValue', Number(val))"
@@ -13,16 +12,17 @@
         {{ option.label }}
       </option>
     </app-select>
-  </div>
+  </app-field>
 </template>
 
 <script lang="ts">
 import AppSelect from "@/components/atoms/app-select/AppSelect.vue";
+import AppField from "@/components/atoms/app-field/AppField.vue";
 import Product from "@/types/product";
 import { computed, defineComponent, PropType } from "vue";
 
 export default defineComponent({
-  components: { AppSelect },
+  components: { AppSelect, AppField },
   props: {
     modelValue: {
       type: Number,
