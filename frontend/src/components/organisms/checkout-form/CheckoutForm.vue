@@ -51,10 +51,10 @@ import DeliveryType from "@/types/deliveryType";
 import Order from "@/types/order";
 import AppButton from "@/components/atoms/app-button/AppButton.vue";
 import CartItem from "@/types/cartItem";
-import delay from "@/utils/delay";
 import useCart from "@/composables/useCart";
 import useRequest from "@/composables/useRequest";
 import { fetchShops } from "@/api/shops";
+import { placeOrder } from "@/api/orders";
 
 export default defineComponent({
   components: { AppInput, AppField, AppSelect, AppButton },
@@ -69,16 +69,15 @@ export default defineComponent({
       clientName: "",
       clientPhoneNumber: "",
       clientAddress: "",
-      deliveryType: DeliveryType.Pickup,
+      deliveryType: DeliveryType.Delivery,
       items: props.cartItems,
     });
 
     const orderSending = ref(false);
 
     const sendOrder = async () => {
-      // TODO call to api
       orderSending.value = true;
-      await delay(1000);
+      placeOrder(order.value);
       orderSending.value = false;
 
       clearCart();

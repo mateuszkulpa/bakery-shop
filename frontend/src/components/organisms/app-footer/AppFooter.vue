@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-4 bg-gray-100">
-    <div class="max-w-screen-xl mx-auto">footer content</div>
+  <footer class="py-4 bg-gray-100 font-bold">
+    <div class="max-w-screen-xl mx-auto">Torty na zamówienie &copy; 2021</div>
   </footer>
 </template>

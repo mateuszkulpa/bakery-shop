@@ -1,6 +1,8 @@
 <template>
-  <header class="py-4 px-4 bg-gray-100">
-    <nav class="max-w-screen-xl mx-auto flex justify-between">
+  <header
+    class="py-6 px-4 bg-gradient-to-r from-pink-400 to-red-600 shadow-sm text-white"
+  >
+    <nav class="max-w-screen-xl mx-auto flex justify-between font-bold">
       <div class="space-x-4">
         <router-link :to="{ name: 'Home' }">Strona główna</router-link>
         <router-link :to="{ name: 'Products' }">Produkty</router-link>

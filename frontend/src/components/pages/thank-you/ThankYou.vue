@@ -4,12 +4,19 @@
     Twoje zamówienie zostało poprawnie złożone! <br />
     Wkrótce otrzymasz e-maila z potwierdzeniem.
   </div>
+
+  <div class="text-center mt-12">
+    <app-button tag="router-link" :to="{ name: 'Home' }">
+      Wróć na stronę główną
+    </app-button>
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import SectionTitle from "@/components/atoms/section-title/SectionTitle.vue";
+import AppButton from "@/components/atoms/app-button/AppButton.vue";
 
 export default defineComponent({
-  components: { SectionTitle },
+  components: { SectionTitle, AppButton },
 });
 </script>

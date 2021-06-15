@@ -554,9 +554,6 @@
                 "image": {
                   "type": "string"
                 },
-                "published_at": {
-                  "type": "string"
-                },
                 "created_by": {
                   "type": "string"
                 },
@@ -718,10 +715,6 @@
           "featured": {
             "type": "boolean",
             "default": false
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -764,10 +757,6 @@
           "featured": {
             "type": "boolean",
             "default": false
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"

@@ -5,7 +5,7 @@
         <span
           class="text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600"
         >
-          Najlepszego torty
+          Najlepsze torty
         </span>
         <br />
         na zamówienie
