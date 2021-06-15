@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import AppNavigation from "@/components/organisms/app-header/AppNavigation.vue";
-import AppFooter from "@/components/organisms/app-footer/AppFooter.vue";
+import AppNavigation from "@/components/organisms/AppNavigation.vue";
+import AppFooter from "@/components/organisms/AppFooter.vue";
 
 export default defineComponent({
   components: { AppNavigation, AppFooter },
