@@ -8,6 +8,14 @@ export function fetchProducts(): Promise<Product[]> {
   });
 }
 
+export function fetchFeaturedProducts(): Promise<Product[]> {
+  return request({
+    method: "GET",
+    url: `/cakes`,
+    params: { featured: true },
+  });
+}
+
 export function fetchProduct(id: number): Promise<Product> {
   return request({
     method: "GET",

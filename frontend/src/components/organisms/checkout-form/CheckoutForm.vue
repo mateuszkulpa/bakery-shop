@@ -19,6 +19,17 @@
         <option :value="DeliveryType.Delivery">Dostawa do domu</option>
       </app-select>
     </app-field>
+
+    <app-field
+      label="Punkt odbioru"
+      v-if="order.deliveryType == DeliveryType.Pickup"
+    >
+      <app-select v-model="order.pickupLocation">
+        <option v-for="shop in shops" :key="shop.id" :value="shop.name">
+          {{ shop.name }}
+        </option>
+      </app-select>
+    </app-field>
   </div>
 
   <div class="mt-6 flex justify-between">
@@ -42,6 +53,8 @@ import AppButton from "@/components/atoms/app-button/AppButton.vue";
 import CartItem from "@/types/cartItem";
 import delay from "@/utils/delay";
 import useCart from "@/composables/useCart";
+import useRequest from "@/composables/useRequest";
+import { fetchShops } from "@/api/shops";
 
 export default defineComponent({
   components: { AppInput, AppField, AppSelect, AppButton },
@@ -72,11 +85,14 @@ export default defineComponent({
       emit("sent");
     };
 
+    const { data: shops } = useRequest(fetchShops);
+
     return {
       DeliveryType,
       order,
       sendOrder,
       orderSending,
+      shops,
     };
   },
 });

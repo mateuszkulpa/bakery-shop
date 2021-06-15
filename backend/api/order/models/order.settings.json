@@ -45,6 +45,9 @@
         "delivery"
       ],
       "required": true
+    },
+    "pickupLocation": {
+      "type": "string"
     }
   }
 }

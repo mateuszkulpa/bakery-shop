@@ -3,7 +3,7 @@
     :class="[
       'relative overflow-hidden inline-block px-6 py-3 font-bold transition rounded-md',
       {
-        'text-white bg-gradient-to-r from-purple-400 to-purple-600':
+        'text-white bg-gradient-to-r from-pink-400 to-red-600':
           type === 'primary',
       },
       {

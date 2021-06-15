@@ -7,6 +7,7 @@ type Order = {
   clientAddress: string;
   items: CartItem[];
   deliveryType: DeliveryType;
+  pickupLocation?: string;
 };
 
 export default Order;

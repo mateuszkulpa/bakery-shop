@@ -1,18 +1,23 @@
 <template>
-  <div class="text-center">
-    <section-title>Cukiernia</section-title>
-    <app-button tag="router-link" :to="{ name: 'Products' }">
-      Zobacz nasze torty
-    </app-button>
-  </div>
+  <home-template :featured-products="products || []" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import AppButton from "@/components/atoms/app-button/AppButton.vue";
-import SectionTitle from "@/components/atoms/section-title/SectionTitle.vue";
+import HomeTemplate from "@/components/templates/home/Home.vue";
+import useRequest from "@/composables/useRequest";
+import { fetchFeaturedProducts } from "@/api/products";
 
 export default defineComponent({
-  components: { AppButton, SectionTitle },
+  components: {
+    HomeTemplate,
+  },
+  setup() {
+    const { data: products } = useRequest(fetchFeaturedProducts);
+
+    return {
+      products,
+    };
+  },
 });
 </script>

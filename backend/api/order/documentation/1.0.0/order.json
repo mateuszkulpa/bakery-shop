@@ -571,7 +571,8 @@
                     "slug",
                     "coverImage",
                     "minKg",
-                    "maxKg"
+                    "maxKg",
+                    "featured"
                   ],
                   "properties": {
                     "id": {
@@ -610,6 +611,9 @@
                     "maxKg": {
                       "type": "number"
                     },
+                    "featured": {
+                      "type": "boolean"
+                    },
                     "published_at": {
                       "type": "string"
                     },
@@ -637,6 +641,9 @@
               "pickup",
               "delivery"
             ]
+          },
+          "pickupLocation": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -697,7 +704,8 @@
                     "slug",
                     "coverImage",
                     "minKg",
-                    "maxKg"
+                    "maxKg",
+                    "featured"
                   ],
                   "properties": {
                     "id": {
@@ -736,6 +744,9 @@
                     "maxKg": {
                       "type": "number"
                     },
+                    "featured": {
+                      "type": "boolean"
+                    },
                     "published_at": {
                       "type": "string"
                     },
@@ -763,6 +774,9 @@
               "pickup",
               "delivery"
             ]
+          },
+          "pickupLocation": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

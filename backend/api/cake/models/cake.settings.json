@@ -61,6 +61,11 @@
       "type": "decimal",
       "default": 5,
       "required": true
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

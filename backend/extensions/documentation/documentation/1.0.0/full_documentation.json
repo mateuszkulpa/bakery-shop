@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/16/2021 4:10:39 PM"
+    "x-generation-date": "06/15/2021 6:52:19 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4443,7 +4443,8 @@
           "slug",
           "coverImage",
           "minKg",
-          "maxKg"
+          "maxKg",
+          "featured"
         ],
         "properties": {
           "id": {
@@ -4636,6 +4637,10 @@
             "type": "number",
             "default": 5
           },
+          "featured": {
+            "type": "boolean",
+            "default": false
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -4647,7 +4652,8 @@
           "name",
           "slug",
           "minKg",
-          "maxKg"
+          "maxKg",
+          "featured"
         ],
         "properties": {
           "name": {
@@ -4676,6 +4682,10 @@
           "maxKg": {
             "type": "number",
             "default": 5
+          },
+          "featured": {
+            "type": "boolean",
+            "default": false
           },
           "published_at": {
             "type": "string",
@@ -4746,7 +4756,8 @@
                     "slug",
                     "coverImage",
                     "minKg",
-                    "maxKg"
+                    "maxKg",
+                    "featured"
                   ],
                   "properties": {
                     "id": {
@@ -4785,6 +4796,9 @@
                     "maxKg": {
                       "type": "number"
                     },
+                    "featured": {
+                      "type": "boolean"
+                    },
                     "published_at": {
                       "type": "string"
                     },
@@ -4812,6 +4826,9 @@
               "pickup",
               "delivery"
             ]
+          },
+          "pickupLocation": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -4872,7 +4889,8 @@
                     "slug",
                     "coverImage",
                     "minKg",
-                    "maxKg"
+                    "maxKg",
+                    "featured"
                   ],
                   "properties": {
                     "id": {
@@ -4911,6 +4929,9 @@
                     "maxKg": {
                       "type": "number"
                     },
+                    "featured": {
+                      "type": "boolean"
+                    },
                     "published_at": {
                       "type": "string"
                     },
@@ -4938,6 +4959,9 @@
               "pickup",
               "delivery"
             ]
+          },
+          "pickupLocation": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

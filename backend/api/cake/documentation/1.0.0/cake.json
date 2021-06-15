@@ -521,7 +521,8 @@
           "slug",
           "coverImage",
           "minKg",
-          "maxKg"
+          "maxKg",
+          "featured"
         ],
         "properties": {
           "id": {
@@ -714,6 +715,10 @@
             "type": "number",
             "default": 5
           },
+          "featured": {
+            "type": "boolean",
+            "default": false
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -725,7 +730,8 @@
           "name",
           "slug",
           "minKg",
-          "maxKg"
+          "maxKg",
+          "featured"
         ],
         "properties": {
           "name": {
@@ -754,6 +760,10 @@
           "maxKg": {
             "type": "number",
             "default": 5
+          },
+          "featured": {
+            "type": "boolean",
+            "default": false
           },
           "published_at": {
             "type": "string",
