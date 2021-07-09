@@ -1,7 +1,9 @@
 <template>
   <div>
-    <slot name="label" v-bind="{ label }">
-      <label class="text-gray-500 mb-1 block text-sm">{{ label }}</label>
+    <slot name="label" v-bind="{ label, labelFor }">
+      <label class="text-gray-500 mb-1 block text-sm" :for="labelFor">
+        {{ label }}
+      </label>
     </slot>
     <slot></slot>
   </div>
@@ -15,6 +17,10 @@ export default defineComponent({
     label: {
       type: String,
       required: true,
+    },
+    labelFor: {
+      type: String,
+      required: false,
     },
   },
 });

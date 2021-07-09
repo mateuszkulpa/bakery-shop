@@ -1,6 +1,7 @@
 <template>
-  <app-field label="Waga">
+  <app-field label="Waga" :label-for="id">
     <app-select
+      :id="id"
       :value="modelValue"
       @update:modelValue="(val) => $emit('update:modelValue', Number(val))"
     >
@@ -29,6 +30,10 @@ export default defineComponent({
     },
     product: {
       type: Object as PropType<Product>,
+      required: true,
+    },
+    id: {
+      type: String,
       required: true,
     },
   },

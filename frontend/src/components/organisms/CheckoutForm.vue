@@ -1,20 +1,20 @@
 <template>
   <h4 class="mt-6 mb-4 text-2xl">Dane zamówienia</h4>
   <div class="grid md:grid-cols-2 gap-4 mb-8">
-    <app-field label="Imię i nazwisko">
-      <app-input v-model="order.clientName" />
+    <app-field label="Imię i nazwisko" label-for="client-name">
+      <app-input v-model="order.clientName" id="client-name" />
     </app-field>
 
-    <app-field label="Telefon">
-      <app-input v-model="order.clientPhoneNumber" />
+    <app-field label="Telefon" label-for="client-phone-number">
+      <app-input v-model="order.clientPhoneNumber" id="client-phone-number" />
     </app-field>
 
-    <app-field label="Adres">
-      <app-input v-model="order.clientAddress" />
+    <app-field label="Adres" label-for="client-adress">
+      <app-input v-model="order.clientAddress" id="client-adress" />
     </app-field>
 
-    <app-field label="Dostawa">
-      <app-select v-model="order.deliveryType">
+    <app-field label="Dostawa" label-for="delivery-type">
+      <app-select v-model="order.deliveryType" id="delivery-type">
         <option :value="DeliveryType.Pickup">Odbiór osobisty</option>
         <option :value="DeliveryType.Delivery">Dostawa do domu</option>
       </app-select>
@@ -22,9 +22,10 @@
 
     <app-field
       label="Punkt odbioru"
+      label-for="pickup-location"
       v-if="order.deliveryType == DeliveryType.Pickup"
     >
-      <app-select v-model="order.pickupLocation">
+      <app-select v-model="order.pickupLocation" id="pickup-location">
         <option v-for="shop in shops" :key="shop.id" :value="shop.name">
           {{ shop.name }}
         </option>
