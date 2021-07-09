@@ -1,5 +1,5 @@
-type ProductImage = {
-  id: string;
+type Image = {
+  id: number;
   name: string;
   alternativeText: string;
   caption: string;
@@ -11,12 +11,12 @@ type ProductImage = {
   mime: string;
   size: number;
   url: string;
-  previewUrl: string;
+  previewUrl: string | null;
   provider: string;
-  provider_metadata: Record<string, unknown>;
-  related: string;
-  created_by: string;
-  updated_by: string;
+  provider_metadata: Record<string, unknown> | null;
+  related?: string;
+  created_at: string;
+  updated_at: string;
 };
 
-export default ProductImage;
+export default Image;

@@ -1,4 +1,4 @@
-import ProductImage from "./productImage";
+import Image from "./image";
 import ProductCategory from "./productCategory";
 
 type Product = {
@@ -7,11 +7,15 @@ type Product = {
   name: string;
   description: string;
   categories: ProductCategory[];
-  coverImage: ProductImage;
-  images: ProductImage[];
+  coverImage: Image;
+  images: Image[];
+  featured: boolean;
   pricePerKg: number;
   minKg: number;
   maxKg: number;
+  published_at: number;
+  created_at: string,
+  updated_at: string,
 };
 
 export default Product;

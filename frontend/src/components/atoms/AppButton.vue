@@ -16,7 +16,17 @@
     <div
       v-if="loading"
       data-test="loader"
-      class="absolute w-full h-full top-0 left-0 bg-gray-400 flex justify-center items-center"
+      class="
+        absolute
+        w-full
+        h-full
+        top-0
+        left-0
+        bg-gray-400
+        flex
+        justify-center
+        items-center
+      "
     >
       <svg
         class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"

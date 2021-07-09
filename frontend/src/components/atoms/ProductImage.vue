@@ -3,13 +3,13 @@
 </template>
 
 <script lang="ts">
-import ProductImage from "@/types/productImage";
+import Image from "@/types/image";
 import { computed, defineComponent, PropType } from "vue";
 
 export default defineComponent({
   props: {
     image: {
-      type: Object as PropType<ProductImage>,
+      type: Object as PropType<Image>,
       required: true,
     },
   },

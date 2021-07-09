@@ -3,7 +3,12 @@
     <div>
       <div class="mt-12 text-6xl font-extrabold leading-tight">
         <span
-          class="text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600"
+          class="
+            text-transparent
+            bg-clip-text bg-gradient-to-br
+            from-pink-400
+            to-red-600
+          "
         >
           Najlepsze torty
         </span>
@@ -28,7 +33,10 @@
   <section class="mt-32">
     <section-title>Popularne torty</section-title>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div
+      class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+      data-cy="popular-products"
+    >
       <product-card
         v-for="product in featuredProducts"
         :key="product.id"

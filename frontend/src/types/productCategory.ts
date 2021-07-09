@@ -1,7 +1,11 @@
+import Image from "./image";
+
 type ProductCategory = {
-  id: string;
+  id: number;
   name: string;
-  image: string;
+  created_at: string,
+  updated_at: string,
+  image: Image;
 };
 
 export default ProductCategory;
