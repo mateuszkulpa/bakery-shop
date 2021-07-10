@@ -6,7 +6,23 @@ module.exports = {
     fontFamily: {
       sans: ["Open sans", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      animation: {
+        shake: "shake 0.5s ease-in-out forwards",
+      },
+      keyframes: {
+        shake: {
+          "0%": { transform: "translateX(0)" },
+          "15%": { transform: "translateX(0.35rem)" },
+          "30%": { transform: "translateX(-0.35rem)" },
+          "45%": { transform: "translateX(0.35rem)" },
+          "60%": { transform: "translateX(-0.35rem)" },
+          "75%": { transform: "translateX(0.35rem)" },
+          "90%": { transform: "translateX(-0.35rem)" },
+          "100%": { transform: "translateX(0)" },
+        },
+      },
+    },
   },
   variants: {
     extend: {},

@@ -11,6 +11,7 @@
       },
     ]"
     :is="tag"
+    :type="nativeType"
     v-bind="$attrs"
   >
     <div
@@ -73,6 +74,10 @@ export default defineComponent({
       type: Boolean,
       required: false,
       default: false,
+    },
+    nativeType: {
+      type: String,
+      required: false,
     },
   },
 });
