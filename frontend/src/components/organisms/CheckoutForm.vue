@@ -1,63 +1,65 @@
 <template>
   <h4 class="mt-6 mb-4 text-2xl">Dane zamówienia</h4>
-  <form class="grid md:grid-cols-2 gap-4 mb-8" @submit.prevent="sendOrder">
-    <app-field
-      label="Imię i nazwisko"
-      label-for="client-name"
-      :errors="errors.clientName"
-    >
-      <app-input v-model="model.clientName" id="client-name" />
-    </app-field>
+  <form @submit.prevent="sendOrder">
+    <div class="grid md:grid-cols-2 gap-4 mb-8">
+      <app-field
+        label="Imię i nazwisko"
+        label-for="client-name"
+        :errors="errors.clientName"
+      >
+        <app-input v-model="model.clientName" id="client-name" />
+      </app-field>
 
-    <app-field
-      label="Telefon"
-      label-for="client-phone-number"
-      :errors="errors.clientPhoneNumber"
-    >
-      <app-input v-model="model.clientPhoneNumber" id="client-phone-number" />
-    </app-field>
+      <app-field
+        label="Telefon"
+        label-for="client-phone-number"
+        :errors="errors.clientPhoneNumber"
+      >
+        <app-input v-model="model.clientPhoneNumber" id="client-phone-number" />
+      </app-field>
 
-    <app-field
-      label="Adres"
-      label-for="client-adress"
-      :errors="errors.clientAddress"
-    >
-      <app-input v-model="model.clientAddress" id="client-adress" />
-    </app-field>
+      <app-field
+        label="Adres"
+        label-for="client-adress"
+        :errors="errors.clientAddress"
+      >
+        <app-input v-model="model.clientAddress" id="client-adress" />
+      </app-field>
 
-    <app-field
-      label="Dostawa"
-      label-for="delivery-type"
-      :errors="errors.deliveryType"
-    >
-      <app-select v-model="model.deliveryType" id="delivery-type">
-        <option :value="DeliveryType.Pickup">Odbiór osobisty</option>
-        <option :value="DeliveryType.Delivery">Dostawa do domu</option>
-      </app-select>
-    </app-field>
+      <app-field
+        label="Dostawa"
+        label-for="delivery-type"
+        :errors="errors.deliveryType"
+      >
+        <app-select v-model="model.deliveryType" id="delivery-type">
+          <option :value="DeliveryType.Pickup">Odbiór osobisty</option>
+          <option :value="DeliveryType.Delivery">Dostawa do domu</option>
+        </app-select>
+      </app-field>
 
-    <app-field
-      v-if="model.deliveryType == DeliveryType.Pickup"
-      label="Punkt odbioru"
-      label-for="pickup-location"
-      :errors="errors.clientName"
-    >
-      <app-select v-model="model.pickupLocation" id="pickup-location">
-        <option v-for="shop in shops" :key="shop.id" :value="shop.name">
-          {{ shop.name }}
-        </option>
-      </app-select>
-    </app-field>
+      <app-field
+        v-if="model.deliveryType == DeliveryType.Pickup"
+        label="Punkt odbioru"
+        label-for="pickup-location"
+        :errors="errors.clientName"
+      >
+        <app-select v-model="model.pickupLocation" id="pickup-location">
+          <option v-for="shop in shops" :key="shop.id" :value="shop.name">
+            {{ shop.name }}
+          </option>
+        </app-select>
+      </app-field>
+    </div>
+
+    <div class="mt-6 flex justify-between">
+      <app-button tag="router-link" :to="{ name: 'Cart' }" type="secondary"
+        >Wróć</app-button
+      >
+      <app-button native-type="submit" :loading="orderSending">
+        Złóż zamówienie
+      </app-button>
+    </div>
   </form>
-
-  <div class="mt-6 flex justify-between">
-    <app-button tag="router-link" :to="{ name: 'Cart' }" type="secondary"
-      >Wróć</app-button
-    >
-    <app-button native-type="submit" @click="sendOrder" :loading="orderSending">
-      Złóż zamówienie
-    </app-button>
-  </div>
 </template>
 
 <script lang="ts">
