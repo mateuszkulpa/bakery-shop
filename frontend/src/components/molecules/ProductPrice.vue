@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="text-2xl">
-      <span class="font-extrabold">{{ price }} PLN </span>
+      <span class="font-extrabold" data-test-id="price">{{ price }} PLN </span>
     </div>
-    <div class="text-gray-500 mb-1 block text-sm">
+    <div class="text-gray-500 mb-1 block text-sm" data-test-id="price-per-kg">
       Cena za kg: {{ pricePerKg }} PLN
     </div>
   </div>

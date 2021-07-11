@@ -13,12 +13,15 @@
           class="text-sm text-gray-500 mr-2"
           v-for="category in product.categories"
           :key="category.id"
+          data-test-id="product-category"
         >
           {{ category.name }}
         </span>
       </div>
-      <h3 class="text-lg font-bold">{{ product.name }}</h3>
-      <div>
+      <h3 class="text-lg font-bold" data-test-id="product-title">
+        {{ product.name }}
+      </h3>
+      <div data-test-id="product-price">
         <span class="font-bold text-3xl">{{ product.pricePerKg }} PLN</span>
         <span class="text-lg text-gray-500"> / kg</span>
       </div>
