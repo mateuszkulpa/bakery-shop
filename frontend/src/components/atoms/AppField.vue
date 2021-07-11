@@ -12,7 +12,11 @@
       </label>
     </slot>
     <slot></slot>
-    <span v-if="hasAnyError" class="text-sm text-red-500">
+    <span
+      v-if="hasAnyError"
+      data-test-id="validation-error"
+      class="text-sm text-red-500"
+    >
       {{ formattedErrors }}
     </span>
   </div>

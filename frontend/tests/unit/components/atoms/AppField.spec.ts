@@ -24,4 +24,19 @@ describe("AppField.vue", () => {
 
     expect(wrapper.find("label").classes()).toContain("custom-label");
   });
+
+  it("displays errors when errors prop is paseed", () => {
+    const error = "The field is required";
+    const wrapper = mount(AppField, {
+      props: {
+        label: "label",
+        errors: [error],
+      },
+    });
+
+    const validationError = wrapper.find("[data-test-id='validation-error']");
+
+    expect(validationError.exists()).toBe(true);
+    expect(validationError.text()).toMatch(error);
+  });
 });
