@@ -1,6 +1,9 @@
 <template>
   <div class="text-right text-xl">
-    Łączny koszt: <span class="font-extrabold">{{ totalPrice }} zł</span>
+    Łączny koszt:
+    <span class="font-extrabold" data-test-id="total-price">
+      {{ totalPrice }} PLN
+    </span>
   </div>
 </template>
 <script lang="ts">

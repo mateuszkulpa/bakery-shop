@@ -32,7 +32,14 @@
           :price-per-kg="cartItem.product.pricePerKg"
         />
         <div class="flex justify-end">
-          <button v-if="!readonly" class="px-4" @click="onRemove">Usuń</button>
+          <button
+            v-if="!readonly"
+            class="px-4"
+            @click="onRemove"
+            data-item-id="remove-cart-item"
+          >
+            Usuń
+          </button>
         </div>
       </div>
     </div>
