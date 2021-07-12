@@ -1,12 +1,16 @@
 <template>
-  <weight-select v-model="form.weight" :product="product" id="weight" />
+  <form @submit.prevent="addToCart">
+    <weight-select v-model="form.weight" :product="product" id="weight" />
 
-  <app-field label="Uwagi do zamówienia" label-for="remarks" class="mt-4">
-    <app-textarea v-model="form.remarks" rows="4" id="remarks" />
-  </app-field>
+    <app-field label="Uwagi do zamówienia" label-for="remarks" class="mt-4">
+      <app-textarea v-model="form.remarks" rows="4" id="remarks" />
+    </app-field>
 
-  <product-price :weight="form.weight" :price-per-kg="product.pricePerKg" />
-  <app-button class="mt-4" @click="addToCart">Dodaj do koszyka </app-button>
+    <product-price :weight="form.weight" :price-per-kg="product.pricePerKg" />
+    <app-button class="mt-4" native-type="submit">
+      Dodaj do koszyka
+    </app-button>
+  </form>
 </template>
 
 <script lang="ts">

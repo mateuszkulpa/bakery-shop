@@ -20,10 +20,10 @@
 
       <app-field
         label="Adres"
-        label-for="client-adress"
+        label-for="client-address"
         :errors="errors.clientAddress"
       >
-        <app-input v-model="model.clientAddress" id="client-adress" />
+        <app-input v-model="model.clientAddress" id="client-address" />
       </app-field>
 
       <app-field
