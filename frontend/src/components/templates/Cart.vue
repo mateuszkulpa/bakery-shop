@@ -5,10 +5,19 @@
     <cart-summary v-if="cartItems.length > 0" :cart-items="cartItems" />
 
     <div v-if="cartItems.length > 0" class="flex justify-between">
-      <app-button type="secondary" tag="router-link" :to="{ name: 'Products' }">
+      <app-button
+        type="secondary"
+        tag="router-link"
+        :to="{ name: 'Products' }"
+        data-test-id="order-more"
+      >
         Zamów więcej
       </app-button>
-      <app-button tag="router-link" :to="{ name: 'Checkout' }">
+      <app-button
+        tag="router-link"
+        :to="{ name: 'Checkout' }"
+        data-test-id="go-to-checkout"
+      >
         Przejdź dalej
       </app-button>
     </div>

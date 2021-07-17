@@ -103,7 +103,7 @@ export function getSingleProductMock(id: number = 1): Product {
   };
 }
 
-export function getFeaturedProdcutsMock(): Product[] {
+export function getFeaturedProductsMock(): Product[] {
   return [
     getSingleProductMock(1),
     getSingleProductMock(2),
