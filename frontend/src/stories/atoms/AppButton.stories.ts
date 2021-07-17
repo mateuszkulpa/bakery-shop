@@ -1,13 +1,5 @@
 import AppButton from "../../components/atoms/AppButton.vue";
-
-
-type Args = Record<string, unknown>;
-type TemplateFn = ((args: Args) => {
-  components: Args;
-  setup: () => { args: Args };
-  template: string;
-}) & { args?: Args };
-
+import { TemplateFn } from "../types";
 
 export default {
   title: "Atoms/AppButton",
@@ -41,4 +33,11 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   default: "Button content",
   type: "secondary",
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  default: "Button content",
+  type: "secondary",
+  loading: true,
 };

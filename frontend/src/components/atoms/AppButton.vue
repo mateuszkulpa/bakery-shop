@@ -62,7 +62,7 @@ type ButtonType = "primary" | "secondary";
 export default defineComponent({
   props: {
     tag: {
-      type: String,
+      type: String as PropType<ButtonType>,
       required: false,
       default: "button",
     },
