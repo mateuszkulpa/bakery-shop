@@ -4,5 +4,11 @@ module.exports = {
     "^.+\\.vue$": "vue-jest",
   },
   collectCoverage: false,
-  collectCoverageFrom: ["src/**/*.{ts,vue}", "!src/main.js"],
+  collectCoverageFrom: [
+    "src/**/*.{ts,vue}",
+    "!src/main.ts",
+    "!src/router/index.ts",
+    "!src/api/*",
+    "!src/**/*.stories.@(js|jsx|ts|tsx)",
+  ],
 };
