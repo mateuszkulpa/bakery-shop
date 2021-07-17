@@ -35,4 +35,18 @@ describe("CheckoutForm.vue", () => {
 
     expect(wrapper.findAll("[data-test-id='validation-error']").length).toBe(3);
   });
+
+  it("emits a sent event after form submitted", async () => {
+    const wrapper = mount(CheckoutForm, {
+      props: { cartItems: [] },
+    });
+
+    wrapper.find("#client-name").setValue("Jan Kowalski");
+    wrapper.find("#client-phone-number").setValue("12345");
+    wrapper.find("#client-address").setValue("address..");
+    wrapper.find("#delivery-type").setValue(DeliveryType.Delivery);
+    await wrapper.find("form").trigger("submit");
+
+    expect(wrapper.emitted("sent")).toBeTruthy();
+  });
 });
