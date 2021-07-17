@@ -20,6 +20,7 @@
           <shopping-cart-icon class="h-6 w-6" />
           <span
             v-if="cartItemsCount"
+            data-test-id="cart-items-count"
             class="
               absolute
               -top-2
