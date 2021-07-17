@@ -14,6 +14,13 @@ import { defineComponent, PropType } from "vue";
 type InputType = "text" | "number";
 
 export default defineComponent({
+  emits: {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    "update:modelValue"(value: string) {
+      return true;
+    },
+  },
+
   props: {
     type: {
       type: String as PropType<InputType>,
