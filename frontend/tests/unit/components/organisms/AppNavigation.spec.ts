@@ -1,4 +1,4 @@
-import { mount, shallowMount } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import AppNavigation from "@/components/organisms/AppNavigation.vue";
 import { RouterLink } from "../../stubs";
 
