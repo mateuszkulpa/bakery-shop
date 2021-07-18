@@ -1,23 +1,35 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
     <div class="col-span-3">
-      <h1 class="text-4xl font-extrabold text-center">{{ product.name }}</h1>
+      <h1
+        class="text-4xl font-extrabold text-center"
+        data-test-id="product-name"
+      >
+        {{ product.name }}
+      </h1>
+
       <figure
         class="mt-6 aspect-h-6 aspect-w-16 mx-auto rounded-md overflow-hidden"
       >
-        <product-image :image="product.coverImage" class="object-cover" />
+        <product-image
+          :image="product.coverImage"
+          data-test-id="product-main-image"
+          class="object-cover"
+        />
       </figure>
 
       <div class="flex mt-4 space-x-4 overflow-x-auto">
         <product-image
           class="w-32 h-32 object-cover rounded-md"
           v-for="image in product.images"
+          data-test-id="product-additional-image"
           :image="image"
           :key="image.id"
         />
       </div>
 
       <markdown-content
+        data-test-id="product-description"
         class="mt-6 prose max-w-none text-justify"
         :content="product.description"
       />
