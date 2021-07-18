@@ -1,5 +1,6 @@
 import { mount, shallowMount } from "@vue/test-utils";
 import AppField from "@/components/atoms/AppField.vue";
+import { ComputedRef, unref } from "vue";
 
 describe("AppField.vue", () => {
   it("renders label based on label prop", () => {
@@ -38,5 +39,22 @@ describe("AppField.vue", () => {
 
     expect(validationError.exists()).toBe(true);
     expect(validationError.text()).toMatch(error);
+  });
+
+  it("formats errors by joining with comma separator", () => {
+    const wrapper = mount(AppField, {
+      props: {
+        label: "label",
+        errors: ["first error", "second error"],
+      },
+    });
+
+    const vm = wrapper.vm as typeof AppField & {
+      formattedErrors: ComputedRef<string>;
+      hasAnyError: ComputedRef<boolean>;
+    };
+
+    expect(unref(vm.formattedErrors)).toMatch("first error, second error");
+    expect(unref(vm.hasAnyError)).toBeTruthy();
   });
 });

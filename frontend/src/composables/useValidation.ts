@@ -13,8 +13,9 @@ export default function <T>(model: Ref<T>, options: ValidationOptions<T>) {
       options.rules[rule]?.validateSync(model.value[rule]);
       errors.value[rule] = [];
     } catch (err) {
-      if (!(err instanceof ValidationError)) return;
-      errors.value[rule] = err.errors;
+      if (err instanceof ValidationError) {
+        errors.value[rule] = err.errors;
+      }
     }
   };
 

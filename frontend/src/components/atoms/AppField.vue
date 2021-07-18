@@ -42,8 +42,8 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const hasAnyError = computed(() => props.errors?.length > 0);
-    const formattedErrors = computed(() => props.errors?.join(", "));
+    const hasAnyError = computed(() => props.errors.length > 0);
+    const formattedErrors = computed(() => props.errors.join(", "));
 
     return { hasAnyError, formattedErrors };
   },

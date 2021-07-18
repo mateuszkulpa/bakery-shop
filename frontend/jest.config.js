@@ -6,6 +6,7 @@ module.exports = {
   collectCoverage: false,
   collectCoverageFrom: [
     "src/**/*.{ts,vue}",
+    "!src/components/pages/*.{ts,vue}",
     "!src/main.ts",
     "!src/router/index.ts",
     "!src/api/*",

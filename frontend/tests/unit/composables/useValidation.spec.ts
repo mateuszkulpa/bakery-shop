@@ -56,4 +56,21 @@ describe("useValidation.ts", () => {
 
     expect(unref(errors).count).toHaveLength(0);
   });
+
+  it("skips add error when rule throws not ValidationError", async () => {
+    const model = ref({ count: 11 });
+    const { errors, validate } = useValidation(model, {
+      rules: {
+        // @ts-ignore
+        count: {
+          validateSync() {
+            throw new Error("another error");
+          },
+        },
+      },
+    });
+
+    validate();
+    expect(unref(errors).count).toBe(undefined);
+  });
 });
