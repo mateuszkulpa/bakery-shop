@@ -1,5 +1,5 @@
 <template>
-  <div class="md:flex">
+  <div class="md:flex" data-test-id="cart-item-row">
     <product-image
       class="mb-4 md:mb-0 w-48 object-cover rounded-md shadow-lg"
       :image="cartItem.product.coverImage"

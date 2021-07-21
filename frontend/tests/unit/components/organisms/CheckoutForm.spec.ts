@@ -2,6 +2,12 @@ import { mount } from "@vue/test-utils";
 import CheckoutForm from "@/components/organisms/CheckoutForm.vue";
 import DeliveryType from "@/types/deliveryType";
 
+jest.mock("@/api/orders", () => ({
+  placeOrder: () => {
+    return null;
+  },
+}));
+
 describe("CheckoutForm.vue", () => {
   it("displays required fields on form", async () => {
     const wrapper = mount(CheckoutForm, {

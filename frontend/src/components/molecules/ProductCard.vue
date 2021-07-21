@@ -2,6 +2,7 @@
   <router-link
     :to="{ name: 'Product', params: { id: product.id, slug: product.slug } }"
     class="shadow-lg rounded-xl overflow-hidden"
+    data-test-id="product-card"
   >
     <figure class="aspect-w-16 aspect-h-12">
       <product-image class="object-cover" :image="product.coverImage" />

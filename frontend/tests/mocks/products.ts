@@ -110,3 +110,7 @@ export function getFeaturedProductsMock(): Product[] {
     getSingleProductMock(3),
   ];
 }
+
+export function getProductsMock(): Product[] {
+  return new Array(10).fill(0).map((_, i) => getSingleProductMock(i + 1));
+}

@@ -110,15 +110,17 @@ export default defineComponent({
       },
     });
 
-    const sendOrder = () => {
+    const sendOrder = async () => {
       if (!validate()) return;
 
       orderSending.value = true;
-      placeOrder(model.value);
-      orderSending.value = false;
-
-      clearCart();
-      emit("sent");
+      try {
+        await placeOrder(model.value);
+        clearCart();
+        emit("sent");
+      } finally {
+        orderSending.value = false;
+      }
     };
 
     const orderSending = ref(false);
