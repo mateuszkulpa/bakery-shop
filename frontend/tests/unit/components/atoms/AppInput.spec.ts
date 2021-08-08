@@ -19,6 +19,6 @@ describe("AppInput.vue", () => {
       props: { type: "text", modelValue: "test" },
     });
 
-    expect(wrapper.find('input').element.value).toMatch("test");
+    expect(wrapper.find("input").element.value).toMatch("test");
   });
 });

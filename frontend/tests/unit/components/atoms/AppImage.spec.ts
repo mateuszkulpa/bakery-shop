@@ -12,7 +12,6 @@ describe("ProductImage.vue", () => {
       alternativeText: alt,
     };
 
-    
     const wrapper = shallowMount(ProductImage, {
       props: { image },
     });
